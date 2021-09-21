@@ -1,0 +1,110 @@
+/*###################### BACKGROUND #######################*/
+
+html,
+body {
+  height: 100%;
+  color: white;
+}
+
+body {
+  background-image: url("images/bc3.jpg");
+
+  background-size: cover;
+
+  font-family: comic, sans-serif;
+
+  background-repeat: no-repeat;
+}
+
+/*################## SEARCH ######################*/
+
+#search {
+  border: 1px solid whitesmoke;
+
+  background-color: whitesmoke;
+
+  width: 30%;
+}
+
+/*###################### TABLE 1 NAME TEMPERATURE TIME #######################*/
+
+#name-temp-time {
+  border-spacing: 0 25px;
+
+  width: 100%;
+}
+
+#nme-tmp {
+  width: 70%;
+}
+
+h1 {
+  text-align: center;
+
+  font-size: 50px;
+}
+
+/*###################### TABLE 2 DAYS OF THE WEEK  #######################*/
+
+#days {
+  -webkit-backdrop-filter: blur(20px);
+
+  backdrop-filter: blur(20px);
+
+  text-align: center;
+
+  width: 99%;
+
+  padding: 7px;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1), 0 4px 7px 0 rgba(0, 0, 0, 0.8);
+}
+
+#time {
+  -webkit-backdrop-filter: blur(20px);
+
+  backdrop-filter: blur(20px);
+
+  float: right;
+
+  width: 100%;
+
+  padding: 7px;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.06),
+    0 4px 7px 0 rgba(0, 0, 0, 0.8);
+}
+
+/*###################### SUB TABLES #######################*/
+
+#morn,
+#aft,
+#ngt,
+.innr-tmp {
+  text-align: center;
+
+  width: 100%;
+
+  padding: 20px;
+
+  display: block;
+
+  border-radius: 0px;
+
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.06),
+    1px 4px 7px 1px rgba(0, 0, 0, 0.8);
+}
+
+/*###################### EMOJIES #######################*/
+
+.emt {
+  text-align: center;
+
+  font-size: 20px;
+}
+
+.emt2 {
+  text-align: center;
+
+  font-size: 45px;
+}
