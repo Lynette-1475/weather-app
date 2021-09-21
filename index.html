@@ -1,0 +1,257 @@
+
+ <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css" />
+
+    <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script
+                    src="https://kit.fontawesome.com/d8c7fcbb48.js"
+                    crossorigin="anonymous"
+                  ></script>
+                  
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                  <link
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"
+                  />
+                  
+                  <link rel="stylesheet" href="src/styles.css" />
+                </head>
+                <body>
+                  <div class="container">
+                    <div class="main-container">
+                      <div class="row">
+                        <div class="col-6 d-flex">
+                          <form id="search-city">
+                            <input
+                              type="search"
+                              class="search-input"
+                              id="search-input"
+                              autocomplete="off"
+                              placeholder="Search a city"
+                            />
+                            <button class="btn btn-light" class="search-button" id = "click-button" class="search-button" type="submit">
+                              <span class="search-button-text"></span>
+                              <i class="search-icon fas fa-search"></i>
+                            </button>
+                          </form>
+                        </div>
+                        <div class="col-6">
+                          <button
+                          id="cL" type="button" class="btn btn-light"
+                          >
+                            <span class="current-location-button-text">Current location</span>
+                          </button>
+                          
+                        </div>
+                      </div>
+
+
+                      <table id="name-temp-time">
+                        <tr>
+                          <td>
+                             
+                 
+                               <h1 id="main-city">London, GB</h1>
+                           <img id="icon" src="">
+                           <div><span class="cTemp">16</span>°C</div>
+                            
+                           <span class="temp-units">
+                              <button
+                              type="button"
+                              id="temperature-unit-button"
+                              class="temperature-unit-button"
+                            >
+                              °F
+                            </button>
+                             <a href="#" id="fahrenheit"></a> 
+                             <a href="#" id="celsius"></a>
+                             <div class="weather-description" id="weather-description">
+                                 Clouds
+                               </div>
+                           </span>
+
+                           <div class="col-xs-12 col-md-6 col-xl-5 mt-5 container-radius">
+                              <div class="row date-details-container">
+                                <div class="col-xs-12 col-sm-6 date-container">
+                                  <ul>
+                                    <li>Currently</li>
+                                    <li id="current-date">Wed Aug 9</li>
+                                    <li id="current-time">11:23</li>
+                                  </ul>
+                                </div>
+                  
+                                <div class="col-xs-12 col-sm-6 details-container">
+                                  <ul>
+                                    <li id="precipitation-info">Precipitation: 17%</li>
+                                    <li id="humidity-info">Humidity: 70%</li>
+                                    <li id="wind-speed-info">Wind: 5mph</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            
+                           <table id="time">
+                               <tr>
+                                   <td>
+                                       <!--############################## SUB TABLE1 MORNING ###################################-->
+                                       <table id="morn">
+                                           <tr>
+                                               <td  class="emt">🌅20C MORNING</td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td>
+                                      <!--############################## SUB TABLE2 AFTERNOON ###################################-->
+                                       <table id="aft">
+                                           <tr>
+                                               <td class="emt" class="temp">☀️24C AFTERNOON </td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                   
+                               <tr>
+                                   <td>
+                                      <!--############################## SUB TABLE3 NIGHT ###################################-->
+                                       <table id="ngt">
+                                           <tr>
+                                               <td class="emt">🌙18C NIGHT</td>
+                                           </tr>
+                                       </table>
+                                   </td>
+                               </tr>
+                           </table>
+                 
+                       </td>
+                        </tr>
+                      </table>
+
+
+                    
+
+
+   
+        <div class="currentDate" id="current-date"> MONDAY AUGUST 16 8:00PM
+        </div>
+      <table id="days">
+        <td>
+          <div class="row">
+            <div class="col-2">TUE</div>
+            <div class="col-2">WED</div>
+            <div class="col-2">THU</div>
+            <div class="col-2">FRI</div>
+            <div class="col-2">SAT</div>
+            <div class="col-2">SUN</div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/sun.png"
+                style="width: 60px"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/sun.png"
+                style="width: 60px"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/sun.png"
+                style="width: 60px"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/suncloud.png"
+                style="width: 60px"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/suncloud.png"
+                style="width: 60px"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="sunny-clouds"
+                src="images/suncloud.png"
+                style="width: 60px"
+              />
+            </div>
+            <br />
+            <br />
+            <div class="row">
+              <div class="col-2">56°F/14°C</div>
+              <div class="col-2">78°F/34°C</div>
+              <div class="col-2">45°F/12°C</div>
+              <div class="col-2">34°F/78°C</div>
+              <div class="col-2">56°F/68°C</div>
+              <div class="col-2">65°F/23°C</div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+              <div class="col">WIND SPEED</div>
+              <div class="col">HUMIDITY</div>
+              <div class="col">PERCIPITATION</div>
+              <br />
+              <br />
+              <div class="row">
+                <div class="col ml-2">16 KM/H</div>
+                <div class="col">45%</div>
+                <div class="col ml-7">8%</div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </table>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+                     
+                        
+                    </div>
+                  </div>
+                
+  <script src="src.js"></script>
+  
+  
+    </script>
+
+  </body>
+</html>
